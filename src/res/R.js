@@ -1,7 +1,9 @@
-import images from './images'
+import images from './images';
+import colors from './colors';
 
 const R = {
-    images,
-  }
-  
-  export default R
+  images,
+  colors,
+};
+
+export default R;

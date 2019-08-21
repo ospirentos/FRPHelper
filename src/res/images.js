@@ -1,7 +1,12 @@
 const images = {
-  background: require('./images/background.png'),
   DMScreenConatiners: require('./images/DMScreenConatiners.png'),
-  loginContainerBackground: require('./images/loginContainerBackground.png')
-}
+  accept: require('./images/accept.png'),
+  background: require('./images/background.png'),
+  damagetoplayer: require('./images/damagetoplayer.png'),
+  loginContainerBackground: require('./images/loginContainerBackground.png'),
+  logout: require('./images/logout.png'),
+  modify: require('./images/modify.png'),
+  reject: require('./images/reject.png'),
+};
 
-export default images
+export default images;
