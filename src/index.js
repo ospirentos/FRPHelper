@@ -25,7 +25,7 @@ export default class App extends Component {
         Login(readValue).then(ret => {
           if (ret.successfull) {
             const { username } = readValue;
-            /* this.props.navigation.navigate('Home', { username }); */
+            this.props.navigation.replace('Home', { username });
           } else {
             this.setState({
               storageValue: 1,

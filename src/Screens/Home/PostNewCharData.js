@@ -1,18 +1,18 @@
-import config from '../../../../Config';
+import config from '../../../Config';
 
-const apiString = '/api/getUserData';
+const apiString = '/api/createNewCharacter';
 
-const FetchUser = async username => {
+const PostNewCharData = async charData => {
   const response = await fetch(`${config.connectionIP}${apiString}`, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ username }),
+    body: JSON.stringify({ charData }),
   });
   const result = await response.json();
-  return result;
+  return result.successfull;
 };
 
-export default FetchUser;
+export default PostNewCharData;

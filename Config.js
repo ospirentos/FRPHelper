@@ -1,3 +1,3 @@
 module.exports = {
-  connectionIP: 'http://192.168.1.101:8080',
+  connectionIP: 'http://161.9.71.63:8080',
 };

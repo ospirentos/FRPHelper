@@ -1,8 +1,8 @@
 const colors = {
-  background: '#BA5536',
-  container: '#693D3D',
-  objects1: '#46221A',
-  objects2: '#A43820',
+  background: '#EBDCB2',
+  formColor: '#C9A66B',
+  buttonColor: '#AF4425',
+  textColor: '#662E1C',
 };
 
 export default colors;

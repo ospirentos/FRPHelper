@@ -30,42 +30,55 @@ const styles = StyleSheet.create({
     width: wp(70),
     height: hp(55),
     alignItems: 'center',
-    backgroundColor: R.colors.objects1,
-    borderColor: R.colors.objects1,
-    borderRadius: 15,
-    borderWidth: 1,
+    backgroundColor: R.colors.background,
   },
   header: {
     fontSize: 40,
     marginTop: hp(1),
     marginBottom: hp(8),
-    color: R.colors.object1,
+    color: R.colors.textColor,
   },
   inputbox: {
-    width: wp(50),
+    width: wp(60),
     height: hp(5),
     borderWidth: 1,
     margin: hp(2),
     padding: hp(0),
     paddingLeft: wp(3),
-    backgroundColor: R.colors.background,
-    borderColor: R.colors.background,
+    backgroundColor: R.colors.formColor,
+    borderColor: R.colors.formColor,
     top: -hp(4),
     borderRadius: 5,
+    shadowColor: R.colors.textColor,
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    elevation: 5,
   },
   submitButton: {
-    width: wp(35),
-    height: hp(5),
-    borderWidth: 1,
+    width: wp(45),
+    height: hp(6),
     justifyContent: 'center',
     alignItems: 'center',
     margin: hp(1),
-    borderRadius: 15,
-    backgroundColor: R.colors.objects2,
+    borderRadius: 8,
+    backgroundColor: R.colors.buttonColor,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   },
-  signupText: {
+  buttonText: {
     fontSize: 15,
-    marginTop: 20,
+    color: R.colors.background,
   },
 });
 
@@ -120,6 +133,7 @@ export default class LoginScreen extends Component {
             style={styles.inputbox}
             placeholder="Password"
             placeholderTextColor="black"
+            secureTextEntry
             onChangeText={text => this.setState({ password: text })}
             value={this.state.password}
           />
@@ -132,7 +146,7 @@ export default class LoginScreen extends Component {
             {this.state.loginWaiting ? (
               <ActivityIndicator size="small" color="black" />
             ) : (
-              <Text>Login!</Text>
+              <Text style={styles.buttonText}>Login!</Text>
             )}
           </TouchableOpacity>
           <TouchableOpacity
@@ -144,7 +158,7 @@ export default class LoginScreen extends Component {
             {this.state.signinWaiting ? (
               <ActivityIndicator size="small" color="black" />
             ) : (
-              <Text>Signup!</Text>
+              <Text style={styles.buttonText}>Signup!</Text>
             )}
           </TouchableOpacity>
         </View>

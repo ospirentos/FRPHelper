@@ -9,13 +9,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: R.colors.background,
   },
 });
 
 const Idle = () => {
   return (
     <ImageBackground style={styles.background} source={R.images.background}>
-      <ActivityIndicator size="large" color="red" />
+      <ActivityIndicator size="large" color={R.colors.buttonColor} />
     </ImageBackground>
   );
 };

@@ -2,12 +2,14 @@
  * @format
  */
 
-import { AppRegistry } from 'react-native';
+import { AppRegistry, YellowBox } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { name as appName } from './app.json';
 
 import App from './src';
 import Home from './src/Screens/Home';
+
+YellowBox.ignoreWarnings(['Warning: ViewPagerAndroid has been extracted']);
 
 const AppNavigator = createStackNavigator({
   EntryPoint: {
@@ -18,6 +20,12 @@ const AppNavigator = createStackNavigator({
   },
   Home: {
     screen: Home,
+    navigationOptions: ({ navigation }) => ({
+      title: `${navigation.state.params.username}`.toUpperCase(),
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }),
   },
 });
 
