@@ -27,7 +27,7 @@
     "react-native-popup-menu": "^0.15.6",
     "react-native-responsive-screen": "^1.2.2",
     "react-navigation": "^3.11.1",
-    "socket.io-client": "^2.1.1"
+    "socket.io-client": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
